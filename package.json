@@ -1,0 +1,42 @@
+{
+  "name": "Colive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Colive",
+  "author": "Alok",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.1.3",
+    "bootstrap": "^4.6.2",
+    "css-loader": "^5.1.1",
+    "gatsby": "^3.0.1",
+    "gatsby-plugin-manifest": "^3.3.0",
+    "gatsby-plugin-sass": "^4.0.2",
+    "gatsby-plugin-sharp": "^3.1.1",
+    "google-map-react": "^2.2.0",
+    "node-sass": "^5.0.0",
+    "react": "^16.0.0",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-bootstrap": "^1.6.6",
+    "react-dom": "^16.0.0",
+    "react-helmet": "^6.1.0",
+    "react-modal-video": "^1.2.6",
+    "react-slick": "^0.28.1",
+    "react-sticky-box": "^1.0.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^2.0.0",
+    "uuid": "^3.4.0"
+  }
+}
