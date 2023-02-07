@@ -1,0 +1,2 @@
+(self.webpackChunkColive=self.webpackChunkColive||[]).push([[678],{7704:function(e,l,t){"use strict";t.r(l);var a=t(7294),n=t(2071);l.default=function(){return a.createElement("div",{className:"wrapper"},a.createElement(n.default,null))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-4f5ddb125a8bc27cb0f4.js.map
