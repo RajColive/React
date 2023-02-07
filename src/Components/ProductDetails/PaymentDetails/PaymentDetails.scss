@@ -1,0 +1,304 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+.payment {
+    padding: 49px 0;
+    .sm-content {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 14px;
+        letter-spacing: 5.8px;
+        margin-left: 1px;
+        text-transform: uppercase;
+        @include fontsize(11px);
+        &::after {
+            @include after(48px, 1px);
+            @include absolute($top: 5px, $left: 99px);
+            background-color: $gold;
+        }
+    }
+    h3 {
+        @include fontsize(22px);
+        font-weight: $normal-weight;
+        letter-spacing: -0.8px;
+        margin-bottom: 33px;
+        color: $black;
+    }
+    .payment-wrapper {
+        background-color: $light-gray;
+        padding: 32px 0 22px;
+    }
+    .form-data {
+        padding: 0 25px;
+        .form-group {
+            position: relative;
+            &:last-child {
+                margin-bottom: 27px;
+                
+            }
+            &:first-child .form-control{
+                padding-left: 8px;
+            }
+            &:nth-child(3) .form-control{
+                padding-left: 8px;
+            }
+            span{
+                position: absolute;
+                left: 0;
+                top: 31px;
+            }
+        }
+        .form-label {
+            @include fontsize(11px);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 2px;
+        }
+        .form-control {
+            @include fontsize(14px);
+            border-color: $color-secondary;
+         
+        }
+    }
+    .payments {
+        display: flex;
+        flex-direction: column;
+    }
+    .re-payment {
+        text-transform: uppercase;
+        @include fontsize(11px);
+        margin-bottom: 18px;
+        color: $color-secondary;
+        letter-spacing: 0.7px;
+    }
+    .price {
+        @include fontsize(19px);
+        color: $gold;
+        font-weight: $medium-weight;
+    }
+    .our-advisors {
+        margin-top: 29px;
+        margin-left: 25px;
+        h5 {
+            @include fontsize(14px);
+            color: $gray;
+            font-weight: $normal-weight;
+            margin-bottom: 19px;
+        }
+        .images {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            .author-img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                margin-right: 16px;
+            }
+            .about-img {
+                display: flex;
+                align-items: center;
+                h4 {
+                    margin-bottom: 0;
+                    @include fontsize(14px);
+                    text-transform: capitalize;
+                    font-family: $font-base;
+                    color: $gold;
+                    font-weight: $semibold-weight;
+                    margin-right: 11px;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        @include absolute($top: 11px, $right: -6px);
+                        @include widthheight(2px, 2px);
+                        background-color: $light-black;
+                    }
+                    &:before {
+                        content: "";
+                        @include absolute($bottom: 3px, $left: 0);
+                        @include widthheight(100%, 1px);
+                        background-color: $gold;
+                    }
+                }
+                .tel {
+                    @include fontsize(14px);
+                    transition: all 0.5s;
+                    &:hover{
+                        color: $gold;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-md) {
+    .payment {
+        padding-top: 35px;
+        .container {
+            padding-left: 24px;
+        }
+        h3 {
+            letter-spacing: 1.1px;
+            @include fontsize(22px);
+            margin-bottom: 33px;
+        }
+        .form-data {
+            padding: 0 57px 0 50px;
+            .form-field {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .form-group {
+                width: calc(50% - 16px);
+            }
+        }
+        .our-advisors {
+            margin-top: 38px;
+            margin-left: 50px;
+            .author-info {
+                display: flex;
+                align-items: center;
+            }
+            .images {
+                margin-right: 41px;
+            }
+        }
+        .payment-wrapper {
+            padding: 37px 0 24px;
+        }
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .payment {
+        position: relative;
+        padding-top: 85px;
+        .container {
+            padding-left: 43px;
+        }
+        .sm-content {
+            @include fontsize(14px);
+            position: absolute;
+            top: 153px;
+            letter-spacing: 7px;
+            left: -73px;
+            transform: rotate(270deg);
+            &::after {
+                left: 128px;
+                top: 6px;
+                width: 78px;
+                letter-spacing: 128px;
+            }
+        }
+        h3 {
+            @include fontsize(40px);
+            letter-spacing: -1.5px;
+        }
+        .form-data {
+            display: flex;
+            padding: 0 57px 0 57px;
+            .form-field {
+                width: 79%;
+                justify-content: initial;
+                flex-wrap: nowrap;
+            }
+            .form-group {
+                width: 29%;
+                margin-right: 25px;
+                &:first-child .form-control{
+                    padding-left: 11px;
+                }
+                &:nth-child(3) .form-control{
+                    padding-left: 11px;
+                }
+                span{
+                    @include fontsize(18px);
+                    top: 44px;
+                }
+            }
+            .form-label {
+                @include fontsize(14px);
+                margin-bottom: 17px;
+            }
+            .form-control {
+                @include fontsize(18px);
+            }
+        }
+        .payments {
+            min-width: 302px;
+            .re-payment {
+                @include fontsize(14px);
+                margin-bottom: 23px;
+                color: $light-black;
+                font-weight:$medium-weight;
+            }
+            .price {
+                @include fontsize(24px);
+            }
+        }
+        .payment-wrapper {
+            padding-top: 68px;
+        }
+        .our-advisors {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            margin-left: 56px;
+            h5 {
+                @include fontsize(16px);
+                margin-right: 35px;
+            }
+            .images {
+                margin-right: 28px;
+                min-width: 242px;
+                .author-img {
+                    width: 32px;
+                    height: 32px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .about-img {
+                    .tel {
+                        @include fontsize(16px);
+                    }
+                    h4 {
+                        margin-right: 14px;
+                        letter-spacing: 0.8px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-xl) and (max-width: $screen-custom - 1px)  {
+    .payment {
+        padding-left: 100px;
+        padding-right: 100px;
+        .payments{
+            min-width: 178px;
+        }
+        .form-data{
+            padding: 0 28px;
+        }
+        .our-advisors{
+            padding-left: 28px;
+        }
+        .sm-content{
+            left: -100px;
+        }
+    }
+}
+@media all and (min-width: $screen-custom) {
+    .payment {
+        .sm-content{
+            left: -117px;
+        }
+        .form-data {
+            .form-group {
+                width: 29%;
+                margin-right: 39px;
+            }
+        }
+    }
+}

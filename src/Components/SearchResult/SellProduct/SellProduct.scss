@@ -1,0 +1,80 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+.sell-product {
+    .sell-info {
+        padding: 36px 0 64px 24px;
+        background-color: $light-gray;
+    }
+    h3 {
+        @include fontsize(22px);
+        max-width: 295px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+    .btn {
+        letter-spacing: 0.6px;
+        padding: 13px 19px 14px 19px;
+        min-width: 191px;
+        font-weight: 500;
+        border-radius: 0;
+    }
+}
+@media all and (min-width: $screen-md) {
+    .sell-product {
+        padding-bottom: 0px;
+        .sell-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding-top: 70px;
+            padding-right: 6px;
+            padding-bottom: 31px;
+        }
+        h3 {
+            max-width: 344px;
+            @include fontsize(28px);
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+        .btn {
+            margin-top: 11px;
+        }
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .sell-product {
+        .sell-info {
+            padding: 40px 50px;
+            justify-content: space-between;
+            &::before {
+                left: 0;
+                width: 52px;
+                background: url("../../../images/Productcard/pattern.svg");
+            }
+        }
+        h3 {
+            @include fontsize(28px);
+            max-width: 769px;
+            word-spacing: 0px;
+            line-height: 1.6;
+        }
+        .btn {
+            @include fontsize(14px);
+            min-width: 216px;
+            margin-top: 0;
+            z-index: inherit;
+        }
+    }
+}
+@media all and (min-width: $screen-custom) {
+    .sell-product{
+      &::before{
+        left: 128px;
+        width: 100px;
+      }
+      .container{
+        max-width: 1500px;
+      }
+    }
+  
+}

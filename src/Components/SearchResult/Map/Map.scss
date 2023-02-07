@@ -1,0 +1,76 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+.map {
+    position: relative;
+    .map-img {
+        img {
+            width: 100%;
+        }
+    }
+    .details-img {
+        position: absolute;
+        top: 0;
+        right: 177px;
+        picture {
+            ::after {
+                content :'';
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 85%;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    .home-content {
+        position: relative;
+        bottom: 76px;
+        left: 24px;
+        color: $white;
+        h4 {
+            margin-bottom: 0;
+            @include fontsize(22px);
+            letter-spacing: -1.4px;
+            word-spacing: 3.7px;
+        }
+        .price {
+            @include fontsize(11px);
+            text-transform: uppercase;
+        }
+    }
+}
+@media all and (min-width: $screen-lg) {
+    .map {
+        padding-top: 260px;
+        .details-img {
+            top: 196px;
+        }
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .map {
+        padding-top: 0px;
+        overflow-x: hidden;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 115px;
+        .details-img {
+            top: 196px;
+            right: 33%;
+        }
+        .home-content{
+            bottom: 108px;
+            left: 54px;
+            h4{
+                @include fontsize(28px);
+                line-height: 1.7;
+            }
+            .price{
+                @include fontsize(14px);
+            }
+        }
+     
+    }
+    
+}

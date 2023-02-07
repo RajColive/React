@@ -1,0 +1,310 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+.property-card.product-banner {
+    .product-card-img {
+        height: auto;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-btn {
+            top: 50%;
+            left: 50%;
+            .video-btn {
+                @include widthheight(56px, 56px);
+                background-color: rgba(255, 37, 135, 0.8);
+                .icon-video {
+                    width: 38px;
+                    height: 52px;
+                }
+            }
+        }
+        &::after {
+            content: "";
+            @include absolute($bottom: 14px, $left: 13px);
+            @include widthheight(40px, 40px);
+            background: url("../../../images/product-details/search.svg") no-repeat center center;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+    .carousel-indicators {
+        display: none;
+    }
+    .carousel-control-prev-icon {
+        background: url("../../../images/product-details/arrow-prev.svg") no-repeat center center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .carousel-control-next-icon {
+        background: url("../../../images/product-details/arrow-next.svg") no-repeat center center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .carousel-control-next {
+        right: 5px;
+        bottom: 12px;
+        top: auto;
+    }
+    .carousel-control-prev {
+        right: 54px;
+        left: auto;
+        bottom: 12px;
+        top: auto;
+    }
+    .product-card-details {
+        padding-left: 19px;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+        background-color: $light-gray;
+
+        h2 {
+            color: $black;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            margin-bottom: 21px;
+        }
+        .sm-text {
+            @include fontsize(11px);
+        }
+        .images {
+            display: flex;
+            align-items: center;
+            .author-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            h4 {
+                margin-bottom: 0;
+                @include fontsize(14px);
+                color: $black;
+                font-family: $font-base;
+            }
+            .tel {
+                @include fontsize(11px);
+                transition: all 0.5s;
+                &:hover {
+                    color: $gold;
+                }
+            }
+            .about-img {
+                margin-left: 13px;
+                width: calc(100% - 53px);
+            }
+        }
+        .sm-text {
+            @include fontsize(14px);
+            margin-bottom: 23px;
+        }
+        .price-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .price-list {
+            margin-bottom: 14px;
+            display: block;
+        }
+        .product-icons {
+            margin-bottom: 33px;
+            display: flex;
+        }
+        .sm-title {
+            margin-bottom: 20px;
+        }
+    }
+}
+@media all and (min-width: $screen-md) {
+    .property-card.product-banner {
+        .product-card-img {
+            &::after {
+                content: "";
+                @include absolute($bottom: 24px, $left: 23px);
+                @include widthheight(64px, 64px);
+                background: url("../../../images/product-details/zoom-search.svg") no-repeat center center;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+        }
+        .carousel {
+            .carousel-control-prev-icon {
+                background: url("../../../images/Productcard/arrow-left.svg") no-repeat center center;
+                width: 64px;
+                height: 64px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .carousel-control-next-icon {
+                background: url("../../../images/Productcard/arrow-left.svg") no-repeat center center;
+                width: 64px;
+                height: 64px;
+                background-color: rgba(0, 0, 0, 0.5);
+                transform: rotate(180deg);
+            }
+            .carousel-control-next {
+                right: -1px;
+                bottom: 23px;
+                top: auto;
+            }
+            .carousel-control-prev {
+                right: 78px;
+                left: auto;
+                bottom: 23px;
+                top: auto;
+            }
+        }
+        .price-details {
+            .sm-title {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        .carousel-control-prev-icon {
+            @include widthheight(64px, 64px);
+        }
+        .carousel-control-next-icon {
+            @include widthheight(64px, 64px);
+        }
+        .product-card-img {
+            margin-left: 0;
+            .carousel {
+                width: 100%;
+            }
+        }
+        .product-card-details {
+            padding: 36px 0 39px 24px;
+            h2 {
+                letter-spacing: 0;
+                margin-bottom: 22px;
+            }
+            .sm-title {
+                margin-bottom: 24px;
+            }
+            .price-list {
+                margin-bottom: 26px;
+            }
+            .product-icons {
+                margin-bottom: 11px;
+            }
+            .sm-text {
+                @include fontsize(11px);
+            }
+            .images {
+                .about-img {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .property-card.product-banner {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        background-color: $light-gray;
+        padding-bottom: 0;
+        margin-bottom: 41px;
+        position: relative;
+        top: 50px;
+        .product-card-img {
+            width: 50%;
+            &:after {
+                bottom: 31px;
+                left: 28px;
+            }
+        }
+        .carousel {
+            .carousel-control-prev {
+                right: 61px;
+                bottom: 32px;
+            }
+            .carousel-control-next {
+                right: -19px;
+                bottom: 32px;
+            }
+        }
+        .product-card-details {
+            padding-left: 100px;
+            padding-top: 122px;
+            padding-right: 10px;
+            width: 50%;
+            h2 {
+                max-width: 500px;
+                letter-spacing: 0px;
+                margin-bottom: 16px;
+                line-height: 1.2;
+                font-size: 2.125rem;
+                font-weight: 600;
+            }
+            .sm-text {
+                max-width: 300px;
+                @include fontsize(14px);
+                text-align: center;
+            }
+            .sm-title {
+                @include fontsize(18px);
+                margin-bottom: 34px;
+            }
+            .price-list {
+                margin-bottom: 44px;
+            }
+            .product-icons {
+                margin-bottom: 13px;
+            }
+            .images {
+                .author-img {
+                    width: 64px;
+                    height: 64px;
+                }
+                h4 {
+                    @include fontsize(18px);
+                    line-height: 2;
+                }
+                .tel {
+                    @include fontsize(16px);
+                }
+                .about-img {
+                    margin-left: 28px;
+                }
+            }
+        }
+        .buttons {
+            margin-bottom: 55px;
+            .btn {
+                min-width: 335px;
+                @include fontsize(14px);
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-xl) and (max-width: $screen-custom)  {
+    .property-card.product-banner {
+        .product-card-details{
+            width: 56%;
+        }
+        .product-card-img{
+            width: 50%;
+        }
+        .carousel {
+            .carousel-control-next{
+                right: 0;
+            }
+            .carousel-control-prev{
+                right: 80px;
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-custom) {
+    .property-card.product-banner {
+        .product-card-details {
+            padding-left: 157px;
+            padding-right: 0;
+            min-width: 697px;
+        }
+        .product-card-img {
+            min-width: 1103px;
+        }
+    }
+}

@@ -1,0 +1,320 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+.features {
+    padding-top: 7px;
+    .features-descripton {
+        .sub-content {
+            letter-spacing: 5.6px;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            margin-left: 1px;
+            margin-bottom: 21px;
+            letter-spacing: 5.4px;
+            @include fontsize(11px);
+            &::after {
+                @include after(48px, 2px);
+                @include absolute($top: 4px, $left: 96px);
+                background-color: $gold;
+            }
+        }
+        h3 {
+            @include fontsize(22px);
+            margin-bottom: 20px;
+        }
+        p {
+            @include fontsize(16px);
+            line-height: 1.5;
+            margin-bottom: 33px;
+        }
+        .listing {
+            padding-left: 16px;
+            li {
+                margin-bottom: 18px;
+                line-height: 1.5;
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    left: -15px;
+                    top: 8px;
+                    background-color: $gold;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .feature-content {
+        position: relative;
+        margin-top: 31px;
+        max-height: 210px;
+        overflow: hidden;
+        &::after {
+            content: "";
+            @include widthheight(100%, 96px);
+            @include absolute($bottom: 0, $right: 0);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #ffffff 71%);
+        }
+        p {
+            @include fontsize(14px);
+            margin-right: 3px;
+            line-height: 1.6;
+        }
+    }
+    .expand {
+        max-height: unset !important;
+        overflow: unset;
+        &::after {
+            background: none;
+        }
+    }
+    .more {
+        margin-bottom: 43px;
+    }
+    .read-more {
+        display: inline-block;
+        color: $gold;
+        cursor: pointer;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        padding: 23px 0 33px 24px;
+        background-color: $light-gray;
+        h2 {
+            margin-bottom: 18px;
+            color: $black;
+        }
+        .tel {
+            margin-bottom: 20px;
+            a {
+                margin-left: 5px;
+            }
+        }
+        .mail {
+            margin-bottom: 29px;
+            color: $gold;
+            a{
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .btn {
+            letter-spacing: 0.2px;
+            padding-left: 8px;
+            box-shadow: none;
+            color: $gold;
+            padding-left: 23px;
+            letter-spacing: 0.7px;
+            border: 1px solid $gold !important;
+            text-transform: uppercase;
+            max-width: 263px;
+            transition: all 0.5s;
+            border: none;
+            &:hover {
+              color: $gray;
+              border-color:$gray!important;
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-md) {
+    .features {
+        padding-top: 14px;
+        .container {
+            padding-left: 24px;
+        }
+        .features-descripton {
+            h3 {
+                @include fontsize(24px);
+                margin-bottom: 17px;
+            }
+            .listing {
+                li {
+                    margin-bottom: 17px;
+                }
+            }
+        }
+        .feature-content {
+            max-height: 126px;
+            p {
+                max-width: inherit;
+                margin-bottom: 39px;
+            }
+        }
+        .more {
+            margin-bottom: 58px;
+        }
+        .contact-wrapper {
+            display: flex;
+            padding-left: 19px;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .contact-info {
+            padding-left: 33px;
+            padding-right: 25px;
+            width: 50%;
+            h2 {
+                @include fontsize(20px);
+                margin-bottom: 35px;
+            }
+        }
+
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .features {
+        padding-top: 123px;
+        position: relative;
+        .container {
+            padding-left: 15px;
+        }
+        .features-descripton {
+            .sub-content {
+                @include fontsize(14px);
+                position: absolute;
+                top: 174px;
+                letter-spacing: 7px;
+                left: -73px;
+                transform: rotate(270deg);
+                &::after {
+                    left: 128px;
+                    top: 6px;
+                    width: 78px;
+                    letter-spacing: 128px;
+                }
+            }
+            h3 {
+                @include fontsize(40px);
+                letter-spacing: -1.5px;
+                margin-bottom: 23px;
+            }
+            p {
+                @include fontsize(20px);
+                margin-bottom: 42px;
+            }
+            .listing {
+                padding-left: 36px;
+                li {
+                    @include fontsize(18px);
+                    max-width: 560px;
+                    margin-bottom: 25px;
+                    &:before {
+                        @include widthheight(7px, 7px);
+                        @include absolute($top: 10px, $left: -38px);
+                    }
+                }
+            }
+            .feature-content {
+                max-height: 289px;
+                margin-top: 25px;
+                p {
+                    @include fontsize(18px);
+                    margin-top: 19px;
+                    max-width: 850px;
+                    margin-bottom: 23px;
+                }
+            }
+        }
+        .contact-wrapper {
+            flex-direction: column;
+            padding-top: 10px;
+            width: 500px;
+         
+        }
+        .more {
+            margin-top: 30px;
+        }
+        .read-more {
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            width: 100%;
+            padding-top: 36px;
+            padding-bottom: 56px;
+            padding-left: 10px;
+            padding-right: 10px;
+            h2 {
+                @include fontsize(28px);
+                letter-spacing: -1.6px;
+                word-spacing: 3px;
+                margin-bottom: 25px;
+            }
+            .tel {
+                @include fontsize(16px);
+                margin-bottom: 32px;
+                transition: all 0.5s;
+                &:hover {
+                    color: $gold;
+                }
+            }
+            .mail {
+                @include fontsize(16px);
+                margin-bottom: 38px;
+            }
+            address {
+                @include fontsize(16px);
+                line-height: 1.4;
+                margin-bottom: 29px;
+            }
+            .btn {
+                max-width: 369px;
+                border-radius: 0;
+                @include fontsize(14px);
+                font-weight: $medium-weight;
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-xl) and (max-width: $screen-custom)  {
+    .features {
+        padding-top: 123px;
+        padding: 123px 80px 0 100px;
+        .features-descripton .sub-content{
+            left: -100px;
+        }
+        .contact-info{
+            padding-left:30px;
+            padding-right: 30px;
+        }
+        .contact-wrapper {
+            width: 390px;
+         
+        }
+    }
+}
+@media all and (min-width: 1400px) {
+    .features{
+        .contact-info{
+            padding-left:33px;
+            padding-right: 33px;
+        }
+        
+    }
+    }
+
+
+@media all and (min-width: $screen-custom) {
+    .features {
+        .features-descripton {
+            .sub-content {
+                left: -117px;
+            }
+        }
+        .contact-wrapper{
+            padding-left: 9px;
+            padding-right: 28px;
+        }
+        .contact-info{
+            padding-left: 47px;
+        }
+    }
+}

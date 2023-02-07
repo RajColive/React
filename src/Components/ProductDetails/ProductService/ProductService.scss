@@ -1,0 +1,167 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+// sevice styling
+.product-service {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    .about-service {
+        margin-bottom: 25px;
+    }
+    .sub-content {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 19px;
+        letter-spacing: 5.8px;
+        margin-left: 1px;
+        text-transform: uppercase;
+        @include fontsize(11px);
+        &::after {
+            @include after(48px, 1px);
+            @include absolute($top: 5px, $left: 140px);
+            background-color: $gold;
+        }
+    }
+    .sm-description {
+        margin-bottom: 33px;
+    }
+    .service-description {
+        h2 {
+            margin-bottom: 22px;
+        }
+        .btn {
+            padding-left: 19px;
+            border-radius: 0;
+            letter-spacing: 0.5px;
+            min-width: 183px;
+        }
+    }
+    .about-img {
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-md) {
+    .product-service {
+        padding-top: 56px;
+        .container {
+            padding-left: 24px;
+        }
+        .about-service {
+            margin-bottom: 22px;
+            margin-right: 6px;
+        }
+        .sub-content {
+            margin-bottom: 35px;
+        }
+        .service-description {
+            padding-top: 46px;
+            padding-left: 11px;
+            h2 {
+                @include fontsize(24px);
+            }
+            .btn {
+                padding-top: 13px;
+                padding-left: 21px;
+                min-width: 166px;
+            }
+        }
+        .sm-description {
+            margin-bottom: 35px;
+            max-width: 344px;
+        }
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .product-service {
+        padding-top: 66px;
+        .about-service {
+            padding-left: 0;
+            position: relative;
+        }
+        .about-img {
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .sub-content {
+            @include absolute($top: 182px, $left: -94px);
+            font-size: 14px;
+            letter-spacing: 6.8px;
+            transform: rotate(-90deg);
+            margin: 0;
+            &::after {
+                width: 79px;
+                left: 183px;
+                top: 7px;
+            }
+        }
+           .service-description {
+            padding: 50px 29px 2px 16px;
+            h2 {
+                @include fontsize(40px);
+                font-weight: $normal-weight;
+                letter-spacing: -1.4px;
+                margin-bottom: 28px;
+            }
+            p {
+                @include fontsize(18px);
+            }
+            .sm-description {
+                margin-top: 15px;
+                margin-bottom: 39px;
+                max-width: 100%;
+            }
+            .btn {
+                min-width: 245px;
+                @include fontsize(14px);
+                padding: 19px 10px 19px 8px;
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-xl) and (max-width: $screen-custom)  {
+    .product-service{
+        padding-left: 100px;
+        padding-right: 80px;
+        .container {
+            padding-left: 15px;
+        }
+        .service-description h2{
+            @include fontsize(35px);
+        }
+        .sub-content{
+            left: -141px;
+        }
+        .service-description{
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .content_block_col{
+            .animated,.about-service {
+                display: flex;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-custom) {
+    .product-service {
+        .about-service {
+            padding-left: 35px;
+        }
+        .sub-content {
+            top: 172px;
+            left: -138px;
+        
+        }
+    }
+}

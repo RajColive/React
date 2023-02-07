@@ -1,0 +1,122 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+.menu-list {
+    padding-top: 44px;
+    padding-bottom: 30px;
+    .list-menu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+        position: relative;
+        &::after {
+            content: "";
+            @include widthheight(100px, 100%);
+            @include absolute($top: 0, $right: -18px);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #ffffff 71%);
+        }
+        li {
+            white-space: nowrap;
+            margin-right: 37px;
+           
+
+            a {
+                text-transform: uppercase;
+                @include fontsize(11px);
+                transition: color 0.3s;
+                &:hover{
+                    color: $gold;
+                }
+            }
+            &.active {
+                a{
+                    color: $gold;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-md) {
+    .menu-list {
+        padding-top: 36px;
+        .container {
+            padding-left: 23px;
+        }
+        .list-menu {
+            overflow: initial;
+            &::after {
+                background: none;
+            }
+            
+        }
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .menu-list {
+        padding-top: 40px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 24px;
+        }
+        .social-icons {
+            justify-content: space-between;
+            width: 210px;
+        }
+        .list-menu {
+            padding-left: 82px;
+            li {
+                margin-right: 39px;
+
+                a {
+                    @include fontsize(14px);
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        .links {
+            filter: brightness(0.3);
+            &:hover {
+                filter: brightness(1);
+            }
+        }
+        .icon-twitter {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+        .icon-fb {
+            width: 18px;
+            height: 20px;
+            display: block;
+            margin: 0 20px;
+        }
+        .icon-insta {
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+        .sm-content {
+            @include fontsize(16px);
+        }
+
+        .icons-list {
+            width: 202px;
+            display: flex;
+            margin-top: -7px;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media all and (min-width: $screen-custom) {
+    .menu-list {
+        .container{
+            padding-left: 9px;
+        }
+        .list-menu {
+            li {
+                margin-right: 55px;
+            }
+        }
+    }
+}

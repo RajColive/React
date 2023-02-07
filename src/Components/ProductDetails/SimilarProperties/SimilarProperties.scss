@@ -1,0 +1,277 @@
+@import "../../../scss/mixin.scss";
+@import "../../../scss/variables.scss";
+.similar-properties {
+    padding-top: 4px;
+    padding-bottom: 117px;
+    .sub-content {
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-left: 1px;
+        margin-bottom: 21px;
+        letter-spacing: 5.6px;
+        @include fontsize(11px);
+        &::after {
+            @include after(48px, 1px);
+            @include absolute($top: 5px, $right: -56px);
+            background-color: $gold;
+        }
+    }
+    h3 {
+        margin-left: 1px;
+        margin-bottom: 26px;
+        @include fontsize(22px);
+    }
+    .slick-list {
+        margin: 0 -16px;
+    }
+    .slick-slide {
+        padding: 0 16px;
+    }
+    .slider {
+        .home-img {
+            position: relative;
+            overflow: hidden;
+            img {
+                transition: all 0.3s ease-in-out;
+                width: 100%;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            .home-content {
+                width: 298px;
+                @include absolute($bottom: 5px, $left: 175px);
+                color: $white;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+               
+                h4 {
+                    @include fontsize(22px);
+                    letter-spacing: -1px;
+                    font-weight: $normal-weight;
+                    margin-bottom: 0;
+                    transition: all 0.5s;
+                    &:hover{
+                        color: $gold;
+                    }
+                }
+                .price {
+                    @include fontsize(11px);
+                    font-weight: $normal-weight;
+                    text-transform: uppercase;
+                    letter-spacing: 0.7px;
+                    transition: all 0.5s;
+                    &:hover{
+                        color: $gold;
+                    }
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        position: relative;
+        .slick-prev {
+            @include absolute($bottom: -106px, $left: 1px);
+            @include widthheight(56px, 56px);
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+            &:hover {
+                background-color: $silver;
+            }
+            &::before {
+                content: "";
+                height: 12px;
+                width: 20px;
+                display: block;
+                background: url("./../../../images/arrow\ left.svg") no-repeat center center;
+            }
+        }
+        .slick-next {
+            @include absolute($bottom: -108px, $left: 65px);
+            @include widthheight(56px, 56px);
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+            &:hover {
+                background-color: $silver;
+            }
+            &::before {
+                content: "";
+                @include widthheight(20px, 12px);
+                background: url("./../../../images/arrow-right.svg") no-repeat;
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-md) {
+    .similar-properties {
+        padding-top: 10px;
+        padding-bottom: 145px;
+        .container {
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+        .sub-content {
+            letter-spacing: 5.5px;
+            &::after {
+                @include absolute($top: 5px, $right: -58px);
+            }
+        }
+        .slider {
+            display: flex;
+            .home-img {
+                .home-content {
+                    bottom: 4px;
+                }
+            }
+        }
+        h3 {
+            @include fontsize(28px);
+            margin-bottom: 29px;
+        }
+        .sub-content {
+            margin-bottom: 16px;
+        }
+    }
+}
+@media all and (min-width: $screen-xl) {
+    .similar-properties {
+        overflow: hidden;
+        padding-top: 79px;
+        padding-bottom: 59px;
+        .container {
+            position: relative;
+            padding-left: 44px;
+        }
+        .slider {
+            .home-img {
+                width: 100%;
+                img {
+                    object-fit: cover;
+                    height: 532px;
+                    width: 600px;
+                }
+                .home-content {
+                    bottom: 44px;
+                    left: 52px;
+                    width: calc(100% - 52px);
+                    transform: none;
+                    h4 {
+                        @include fontsize(28px);
+                        letter-spacing: -1.2px;
+                    }
+                    .price {
+                        @include fontsize(14px);
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+        .sub-content {
+            font-size: 14px;
+            @include absolute($top: 260px, $left: -117px);
+            letter-spacing: 6.8px;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+            margin: 0;
+            &::after {
+                width: 80px;
+                left: 284px;
+                top: 9px;
+            }
+        }
+        .container {
+            padding-left: 103px;
+        }
+        h3 {
+            @include fontsize(40px);
+            margin-bottom: 47px;
+            letter-spacing: -1.7px;
+        }
+        .slick-list {
+            margin-right: -300px;
+        }
+        .slick-slide {
+            padding: 0 8px;
+        }
+        .slick-arrow {
+            padding-left: 5px;
+            .slick-prev {
+                top: -79px;
+                right: 102px;
+                left: auto;
+                width: 64px;
+                height: 64px;
+                z-index: 1;
+         
+                &::before {
+                    height: 12px;
+                    width: 20px;
+                    background: url("./../../../images/similar-product/arrow-left.svg") no-repeat center center;
+                    filter: brightness(0.3);
+                    position: relative;
+                    z-index: 5;
+                }
+                &:hover {
+                    &::before {
+                        filter: brightness(1);
+                        position: relative;
+                    }
+                }
+            }
+            .slick-next {
+                top: -80px;
+                right: 24px;
+                left: auto;
+                width: 64px;
+                height: 64px;
+                z-index: 1;
+            
+                &::before {
+                    height: 12px;
+                    width: 20px;
+                    background: url("./../../../images/similar-product/arrow-right.svg") no-repeat center center;
+                    filter: brightness(0.3);
+                }
+                &:hover {
+                    &::before {
+                        filter: brightness(1);
+                        z-index: 6;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: $screen-xl) and (max-width: $screen-custom)  {
+    .similar-properties {
+        .container {
+            padding-left: 115px;
+        }
+        .sub-content{
+            left: -44px;
+        }
+    }
+    
+}
+@media all and (min-width: $screen-custom) {
+    .similar-properties {
+        .container {
+            padding-left: 44px;
+        }
+        .sub-content {
+            @include absolute($top: 224px, $left: -163px);
+            &::after {
+                width: 80px;
+                left: 284px;
+                top: 6px;
+            }
+        }
+    }
+}
